@@ -1,0 +1,17 @@
+{
+  "name": "Ng-ContactList",
+  "version": "1.0.0",
+  "description": "Simple Angular.js Contact list",
+  "scripts": {},
+  "author": "<Oscar Granada> @oagranada",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.8.0"
+  },
+  "dependencies": {
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-contrib-stylus": "^0.21.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

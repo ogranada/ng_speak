@@ -1,5 +1,23 @@
 [
-    {"name": "Hugo", "image":"images/hugo.jpg"},
-    {"name": "Paco", "image":"images/paco.jpg"},
-    {"name": "Luis", "image":"images/luis.jpg"}
+    {
+        "id":1,
+        "name": 
+        "Hugo", "image":"images/hugo.jpg"
+    },
+    {
+        "id":2,
+        "name": 
+        "Paco", "image":"images/paco.jpg"
+    },
+    {
+        "id":3,
+        "name": "Luis",
+        "image":"images/luis.jpg"
+    },
+    {
+        "id":4,
+        "name": "Rico Mac Pato",
+        "image":"images/rico.jpg"
+    }
+
 ]
