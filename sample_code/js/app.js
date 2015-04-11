@@ -1,27 +1,15 @@
 (function(){
-    var app = angular.module("sampleApp", []);
-    app.controller("ContactsController", ['$scope', '$http', function($scope, $http){
-        var self = this;
-        self.title = "My Contacts List";
-        self.contacts = [];
-        $http.get('/contacts.json').success(function(data) {
-            self.contacts = data;
-        });
+    var app = angular.module("sampleApp", ['ngRoute', 'sampleControllers']);
+    app.config(['$routeProvider', function($routeProvider) {
+        $routeProvider
+            .when("/", {
+                templateUrl: 'templates/contacts-list.html',
+                controller: 'ContactsController'
+            })
+            .when("/contact/:id", {
+                templateUrl: 'templates/contact-details.html',
+                controller: 'ContactDetailsController'
+            })
+        ;
     }]);
-
-    app.directive("showContact", function(){
-        return {
-            restrict: "E",
-            templateUrl: "templates/contact.html"
-        };
-    });
-
-    app.directive("topBar", function(){
-        return {
-            restrict: "E",
-            templateUrl: "templates/topbar.html"
-        };
-    });
-
-
 })();
