@@ -10,6 +10,9 @@
                 templateUrl: 'templates/contact-details.html',
                 controller: 'ContactDetailsController'
             })
+            .otherwise({
+                redirectTo: '/'
+            })
         ;
     }]);
 })();

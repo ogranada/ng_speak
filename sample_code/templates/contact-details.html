@@ -1,7 +1,11 @@
 
-
-        CONTACT DETAILS
-
-        Elit eum distinctio voluptatibus nesciunt voluptatem. Animi iure repudiandae ex nesciunt sapiente ratione sed veniam et dignissimos cumque! Architecto dicta praesentium exercitationem sequi natus! Iure eligendi quis adipisicing pariatur rem?
-
+    <div class="panel panel-default animated slideInDown" style="padding:1em">
+        <h2>CONTACT DETAILS</h2>
+        <h3>Name:</h3>
+        <h4>{{$parent.contacts[contactId].name}}</44>
+        <div class="text-center">
+            <img ng-src="{{$parent.contacts[contactId].image}}" alt="contact image">
+        </div>
+        <button ng-click="goBack()" class="btn btn-info">Back</button>
+    </div>
 

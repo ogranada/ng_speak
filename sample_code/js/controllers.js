@@ -1,15 +1,23 @@
 (function () {
     var controllers = angular.module("sampleControllers", []);
     controllers.controller("ContactsController", ['$scope', '$http', function($scope, $http){
-        var self = this;
         self.title = "My Contacts List";
-        self.contacts = [];
         $http.get('/contacts.json').success(function(data) {
-            self.contacts = data;
+            $scope.contacts = data;
         });
     }]);
-    controllers.controller("ContactDetailsController", ['$scope', '$routeParams', function($scope, $routeParams){
-        $scope.contactId = $routeParams.id;
+    controllers.controller("ContactDetailsController", ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http){
+        var id = $routeParams.id;
+        var contacts = $scope.contacts;
+        for(i=0;i<contacts.length;i++){
+            var obj = contacts[i];
+            if(obj.id==id){
+                $scope.contactId = i;
+            }
+        }
+        $scope.goBack = function(){
+            window.history.back();
+        };
     }]);
 
     controllers.directive("showContact", function(){
